@@ -1,7 +1,7 @@
 window.onload = function() {
     // Web uygulamanızın Firebase yapılandırması
     const firebaseConfig = {
-        apiKey: "API_KEY",
+        apiKey: "AIzaSyCshpssuJaHGDu_LpENSpTBUP9Z1K2wxEA",
         authDomain: "chatlink-beta-uygulamasi-1eac8.firebaseapp.com",
         projectId: "chatlink-beta-uygulamasi-1eac8",
         storageBucket: "chatlink-beta-uygulamasi-1eac8.appspot.com",
