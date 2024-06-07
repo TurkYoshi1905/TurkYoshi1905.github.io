@@ -121,7 +121,7 @@ window.onload = function() {
             chat_input_send.setAttribute('id', 'chat_input_send');
             chat_input_send.setAttribute('src', 'Başlıksız3_20240607132133.png'); // Image src attribute
             chat_input_send.setAttribute('alt', 'Mesaj Gönder');
-            chat_input_send.setAttribute('style', 'cursor: pointer;'); // Görüntüyü buton gibi yap
+            chat_input_send.setAttribute('style', 'cursor: pointer; max-width: 100%; max-height: 100%;'); // Görüntüyü buton gibi yap ve boyutlarını ekrana uygun hale getir
             chat_input_send.onclick = function() {
                 if (chat_input.value.trim() !== '') {
                     parent.send_message(chat_input.value);
@@ -267,3 +267,22 @@ window.onload = function() {
         app.chat();
     }
 };
+
+// CSS Ekleyelim
+const style = document.createElement('style');
+style.textContent = `
+    #chat_input_send {
+        display: block;
+        max-width: 100px;
+        max-height: 100px;
+        width: auto;
+        height: auto;
+    }
+    @media (max-width: 600px) {
+        #chat_input_send {
+            max-width: 80px;
+            max-height: 80px;
+        }
+    }
+`;
+document.head.append(style);
