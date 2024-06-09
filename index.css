@@ -1,5 +1,4 @@
-body{
-  /* https://www.color-hex.com/color/d3d3d3 */
+body {
   background-color: #fff; /*#f6f6f6, EBEBD3, fafafa*/
   font-family: Bungee Outline;
   font-weight: 900;
@@ -7,7 +6,7 @@ body{
   animation: blur 0.5s ease-out;
 }
 
-*{
+* {
   outline: none;
   border: none;
   padding: 0;
@@ -15,7 +14,7 @@ body{
   box-sizing: border-box;
 }
 
-#title_container{
+#title_container {
   width: 100%;
   height: 225px;
   display: flex;
@@ -26,7 +25,7 @@ body{
   box-shadow: 0 0 30px -18px #D64045;
 }
 
-#title_inner_container{
+#title_inner_container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -36,7 +35,7 @@ body{
   border-radius: 200px;
 }
 
-#title{
+#title {
   display: inline-block;
   color: #fff;/*EBEBD3, C5283D*/
   font-size: 55px;
@@ -44,7 +43,7 @@ body{
   user-select: none;
 }
 
-#join_container{
+#join_container {
   width: 100%;
   height: 200px;
   display: flex;
@@ -54,12 +53,12 @@ body{
   margin-top: 80px;
 }
 
-#join_inner_container{
+#join_inner_container {
   width: 50%;
   height: 100%;
 }
 
-#join_input_container{
+#join_input_container {
   width: 100%;
   height: 50px;
   display: flex;
@@ -68,7 +67,7 @@ body{
   float: left;
 }
 
-#join_input{
+#join_input {
   width: 60%;
   height: 40px;
   color: #1D3354;
@@ -80,11 +79,11 @@ body{
   border-bottom: 2px dashed #1D3354;
 }
 
-#join_input:focus{
+#join_input:focus {
   box-shadow: 0 10px 30px -17px #1D3354;
 }
 
-#join_button_container{
+#join_button_container {
   width: 100%;
   height: 50px;
   display: flex;
@@ -93,7 +92,7 @@ body{
   float: left;
 }
 
-#join_button{
+#join_button {
   width: 60%;
   height: 40px;
   font-family: Varela Round;
@@ -103,7 +102,7 @@ body{
   color: #fff;
 }
 
-#chat_container{
+#chat_container {
   width: 100%;
   height: 450px;
   display: flex;
@@ -114,12 +113,12 @@ body{
   animation: fadeIn 1s linear;
 }
 
-#chat_inner_container{
+#chat_inner_container {
   width: 40%;
   height: 100%;
 }
 
-#chat_content_container{
+#chat_content_container {
   width: 100%;
   height: 90%;
   float: left;
@@ -129,7 +128,7 @@ body{
   padding-right: 15px;
 }
 
-#chat_input_container{
+#chat_input_container {
   width: 100%;
   height: 10%;
   float: left;
@@ -141,7 +140,7 @@ body{
   margin-top: 10px;
 }
 
-#chat_input{
+#chat_input {
   width: 95%;
   height: 100%;
   float: left;
@@ -150,7 +149,7 @@ body{
   font-size: 15px;
 }
 
-#chat_input_send{
+#chat_input_send {
   width: 5%;
   height: 100%;
   float: left;
@@ -160,13 +159,13 @@ body{
   color: #ccc;
 }
 
-#chat_input_send.enabled{
+#chat_input_send.enabled {
   color: #D64045;
   background-color: Transparent;
   cursor: pointer;
 }
 
-#chat_logout_container{
+#chat_logout_container {
   width: 100%;
   display: inline-block;
   display: flex;
@@ -176,69 +175,69 @@ body{
   margin-top: 20px;
 }
 
-#chat_logout{
+#chat_logout {
   color: #D64045;
   cursor: pointer;
 }
 
-#chat_logout:hover{
+#chat_logout:hover {
   text-decoration: underline;
 }
 
-.message_container{
+.message_container {
   width: 100%;
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.message_inner_container{
+.message_inner_container {
   width: 100%;
   display: inline-block;
   color: #1D3354;
 }
 
-.message_user_container{
+.message_user_container {
   width: 100%;
   display: inline-block;
 }
 
-.message_user{
+.message_user {
   font-weight: bold;
   font-size: 14px;
 }
 
-.message_content_container{
+.message_content_container {
   width: 100%;
   display: inline-block;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-.message_content{
+.message_content {
   font-weight: normal;
   font-size: 14px;
   margin-top: 5px;
 }
 
-.enabled{
+.enabled {
   transition: background-color 0.5s;
   color: #fff;
   background-color: #D64045; /*#5B7553;*/
   cursor: pointer;
 }
 
-#title_container.chat_title_container{
+#title_container.chat_title_container {
   transition: 0.8s;
   transition-timing-function: ease-in-out;
   height: 100px;
 }
 
-#title.chat_title{
+#title.chat_title {
   transition: 0.8s;
   font-size: 47px;
 }
 
-.loader_container{
+.loader_container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -315,4 +314,31 @@ body{
   .message_user, .message_content {
     font-size: 12px;
   }
+}
+
+#theme_button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #D64045;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#theme_button:hover {
+  background-color: #b33939;
+}
+
+body.light_theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark_theme {
+  background-color: #000000;
+  color: #ffffff;
 }
