@@ -274,30 +274,6 @@ body {
   border-radius: 5px;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-  #join_inner_container, #chat_inner_container {
-    width: 90%;
-  }
-
-  #title {
-    font-size: 40px;
-  }
-
-  #chat_content_container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  #chat_input, #chat_input_send {
-    font-size: 14px;
-  }
-
-  .message_user, .message_content {
-    font-size: 12px;
-  }
-}
-
 #theme_button {
   position: fixed;
   bottom: 20px;
@@ -362,9 +338,9 @@ body.dark_theme .message_inner_container {
 }
 
 body.dark_theme #theme_button {
-  background-color: #7289da;
+  background-color: #D64045; /* Karanlık tema için kırmızı */
 }
 
 body.dark_theme #theme_button:hover {
-  background-color: #5b6eae;
+  background-color: #b33939; /* Karanlık tema için hover'da kırmızı */
 }
