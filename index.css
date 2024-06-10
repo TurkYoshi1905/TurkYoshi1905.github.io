@@ -140,6 +140,10 @@ body {
   font-size: 15px;
 }
 
+body.dark_theme #chat_input {
+  color: #ffffff; /* Karanlık tema için beyaz yazı rengi */
+}
+
 #chat_input_send {
   width: 5%;
   height: 100%;
