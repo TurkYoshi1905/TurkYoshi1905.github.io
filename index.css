@@ -310,6 +310,10 @@ body.light_theme #chat_input_container {
   border-bottom: 2px dashed #1D3354;
 }
 
+body.light_theme #chat_input {
+  color: #1D3354;
+}
+
 body.light_theme .message_inner_container {
   color: #1D3354;
 }
@@ -331,6 +335,10 @@ body.dark_theme #join_input {
 
 body.dark_theme #chat_input_container {
   border-bottom: 2px dashed #7289da;
+}
+
+body.dark_theme #chat_input {
+  color: #ffffff;
 }
 
 body.dark_theme .message_inner_container {
