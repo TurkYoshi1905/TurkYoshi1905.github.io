@@ -171,6 +171,10 @@ body.dark_theme #chat_input {
   cursor: pointer;
 }
 
+body.dark_theme #chat_logout {
+  background-color: #23272a; /* Karanlık tema için arka plan rengi */
+}
+
 #chat_logout:hover {
   text-decoration: underline;
 }
