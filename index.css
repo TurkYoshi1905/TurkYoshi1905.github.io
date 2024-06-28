@@ -1,4 +1,5 @@
 body {
+  background-color: #fff; /* Varsayılan açık tema arka plan rengi */
   font-family: 'Bungee Outline', sans-serif;
   font-weight: 900;
   overflow: hidden;
@@ -11,15 +12,6 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-#title_container, #join_container, #chat_container, #theme_page_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  flex-direction: column;
 }
 
 #title_container {
@@ -367,25 +359,4 @@ body.dark_theme #theme_button {
 
 body.dark_theme #theme_button:hover {
   background-color: #b33939; /* Karanlık tema için hover'da kırmızı */
-}
-
-button {
-  margin: 10px;
-  padding: 15px 25px;
-  font-size: 16px;
-}
-
-#confirm_button[disabled] {
-  background-color: grey;
-  cursor: not-allowed;
-}
-
-[data-theme="dark"] {
-  background-color: #333;
-  color: #fff;
-}
-
-[data-theme="light"] {
-  background-color: #fff;
-  color: #000;
 }
