@@ -19,13 +19,13 @@ window.onload = function() {
             document.body.innerHTML = '';
             this.create_title();
             this.create_join_form();
-            this.create_theme_button();
+            this.create_theme_button();  // Tema düğmesini oluştur
         }
 
         chat() {
             this.create_title();
             this.create_chat();
-            this.create_theme_button();
+            this.create_theme_button();  // Tema düğmesini oluştur
         }
 
         create_title() {
@@ -36,7 +36,7 @@ window.onload = function() {
 
             var title = document.createElement('h1');
             title.setAttribute('id', 'title');
-            title.textContent = 'ChatLink Yazışma Uygulaması';
+            title.textContent = 'ChatLink Beta Uygulaması';
 
             title_inner_container.append(title);
             title_container.append(title_inner_container);
@@ -275,71 +275,22 @@ window.onload = function() {
             theme_button.setAttribute('id', 'theme_button');
             theme_button.textContent = 'Tema Değiştir';
 
-            theme_button.onclick = () => {
-                this.create_theme_page();
+            theme_button.onclick = function() {
+                if (document.body.classList.contains('dark_theme')) {
+                    document.body.classList.remove('dark_theme');
+                    document.body.classList.add('light_theme');
+                } else {
+                    document.body.classList.remove('light_theme');
+                    document.body.classList.add('dark_theme');
+                }
             };
 
             document.body.append(theme_button);
-        }
-
-        create_theme_page() {
-            document.body.innerHTML = '';
-
-            var theme_page_container = document.createElement('div');
-            theme_page_container.setAttribute('id', 'theme_page_container');
-
-            var theme_page_title = document.createElement('h1');
-            theme_page_title.textContent = 'Buradan İsterseniz Temanızı Değişebilirsiniz';
-
-            var dark_theme_button = document.createElement('button');
-            dark_theme_button.setAttribute('id', 'dark_theme_button');
-            dark_theme_button.textContent = 'Karanlık Tema';
-
-            var light_theme_button = document.createElement('button');
-            light_theme_button.setAttribute('id', 'light_theme_button');
-            light_theme_button.textContent = 'Aydınlık Tema';
-
-            var confirm_button = document.createElement('button');
-            confirm_button.setAttribute('id', 'confirm_button');
-            confirm_button.textContent = 'Tamam ✅';
-            confirm_button.setAttribute('disabled', true);
-
-            var cancel_button = document.createElement('button');
-            cancel_button.setAttribute('id', 'cancel_button');
-            cancel_button.textContent = 'İptal ❌';
-
-            dark_theme_button.onclick = function() {
-                document.body.setAttribute('data-theme', 'dark');
-                confirm_button.removeAttribute('disabled');
-            };
-
-            light_theme_button.onclick = function() {
-                document.body.setAttribute('data-theme', 'light');
-                confirm_button.removeAttribute('disabled');
-            };
-
-            confirm_button.onclick = function() {
-                localStorage.setItem('theme', document.body.getAttribute('data-theme'));
-                location.reload();
-            };
-
-            cancel_button.onclick = function() {
-                document.body.removeAttribute('data-theme');
-                location.reload();
-            };
-
-            theme_page_container.append(theme_page_title, dark_theme_button, light_theme_button, confirm_button, cancel_button);
-            document.body.append(theme_page_container);
         }
     }
 
     var app = new MEME_CHAT();
     if (app.get_name() != null) {
         app.chat();
-    }
-
-    // Mevcut temayı yükle
-    if (localStorage.getItem('theme') != null) {
-        document.body.setAttribute('data-theme', localStorage.getItem('theme'));
     }
 };
