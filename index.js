@@ -4,7 +4,7 @@ window.onload = function() {
         apiKey: "AIzaSyCshpssuJaHGDu_LpENSpTBUP9Z1K2wxEA",
         authDomain: "chatlink-beta-uygulamasi-1eac8.firebaseapp.com",
         projectId: "chatlink-beta-uygulamasi-1eac8",
-        storageBucket: "chatlink-beta-uygulamasi-1eac8.appspot.com",
+        storageBucket: "chatlink-beta-uygulamasi-1eac8",
         messagingSenderId: "850198621231",
         appId: "1:850198621231:web:7d48a60b3f28320dd86ada",
         measurementId: "G-S5RM2EJGHQ"
@@ -237,7 +237,7 @@ window.onload = function() {
                     var name = data.name;
                     var message = data.message;
                     var time = data.time;
-                    
+
                     var message_container = document.createElement('div');
                     message_container.setAttribute('class', 'message_container');
 
@@ -256,7 +256,7 @@ window.onload = function() {
 
                     var message_content = document.createElement('p');
                     message_content.setAttribute('class', 'message_content');
-                    message_content.textContent = `${message}`;
+                    message_content.innerHTML = parent.make_links_clickable(message);
 
                     message_user_container.append(message_user);
                     message_content_container.append(message_content);
@@ -267,6 +267,13 @@ window.onload = function() {
                 });
 
                 chat_content_container.scrollTop = chat_content_container.scrollHeight;
+            });
+        }
+
+        make_links_clickable(text) {
+            var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+            return text.replace(urlRegex, function(url) {
+                return '<a href="' + url + '" target="_blank">' + url + '</a>';
             });
         }
 
