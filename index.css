@@ -210,6 +210,15 @@ body.dark_theme #chat_logout {
   margin-top: 5px;
 }
 
+.message_content a {
+  color: #1D3354; /* Mesaj içindeki linklerin rengi (açık tema) */
+  text-decoration: underline;
+}
+
+body.dark_theme .message_content a {
+  color: #ffffff; /* Mesaj içindeki linklerin rengi (karanlık tema) */
+}
+
 .enabled {
   transition: background-color 0.5s;
   color: #fff;
